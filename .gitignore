@@ -1,0 +1,15 @@
+# Ignore Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore JetBrains IDE files
+.idea/
+
+# Ignore environment files
+.env
+
+# Ignore node_modules
+node_modules/
+
+# Ignore log files
+*.log
