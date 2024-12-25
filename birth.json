@@ -1,0 +1,30 @@
+{
+  "birth": {
+    "1866-1875": {
+      "A": ["Natti 1866-75/Indice di Nati Decennale 1866-75 A-Br.jpg"],
+      "B": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Br-Cu.jpg",
+        "Natti 1866-75/Indice di Nati Decennale 1866-75 Br-Cu.jpg"],
+      "C": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Br-Cu.jpg"],
+      "D": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Di-Fi.jpg"],
+      "F": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Di-Fi.jpg",
+        "Natti 1866-75/Indice di Nati Decennale 1866-75 Fi-Gi.jpg"],
+      "G-L": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Gr-Ip.jpg",
+        "Natti 1866-75/Indice di Nati Decennale 1866-75 Ip-Maf.jpg"],
+      "M": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Ip-Maf.jpg",
+        "Natti 1866-75/Indice di Nati Decennale 1866-75 Maf-Mar.jpg",
+        "Natti 1866-75/Indice di Nati Decennale 1866-75 Mar-Ni.jpg"],
+      "N": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Mar-Ni.jpg",
+        "Natti 1866-75/Indice di Nati Decennale 1866-75 Ni-Pa.jpg"],
+      "P": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Ni-Pa.jpg",
+      "Natti 1866-75/Indice di Nati Decennale 1866-75 Pa-Ro.jpg"],
+      "R": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Pa-Ro.jpg"],
+      "S": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Sa-Tr.jpg"],
+      "T": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Sa-Tr.jpg",
+      "Natti 1866-75/Indice di Nati Decennale 1866-75 Tr-Vi.jpg"],
+      "U-Z": ["Natti 1866-75/Indice di Nati Decennale 1866-75 Tr-Vi.jpg"]
+    },
+    "1870-1879": {
+      "C": ["file3.jpg"]
+    }
+  }
+}
