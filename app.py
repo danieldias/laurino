@@ -4,7 +4,7 @@ from search import load_data, search_records
 app = Flask(__name__)
 
 # Load JSON data
-data = load_data('laurino_data.json')
+data = load_data('birth.json')
 
 @app.route('/test-static')
 def test_static():
