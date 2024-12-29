@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurino Archive</title>
+</head>
+<body>
+    <h1>Laurino Archive Search</h1>
+    <form method="POST" action="/">
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+        <br>
+        <label for="year_range">Year Range:</label>
+        <input type="text" id="year_range" name="year_range" placeholder="e.g., 1866-1875">
+        <br>
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    {% if records %}
+        {% if records is string %}
+            <p>{{ records }}</p>
+        {% else %}
+            <h2>Results:</h2>
+            <ul>
+                {% for record in records %}
+                    <li>
+                        <img src="{{ url_for('static', filename='images/' + record) }}" alt="Record Image" style="max-width:1800px;">
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+    <hr>
+    <!-- PayPal Donation Form -->
+    <div class="donation-section">
+        <h2>Support the Laurino Archive</h2>
+        <p>Your donations help us maintain and expand this archive. Thank you for your support!</p>
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="hosted_button_id" value="F87WU4KRSG25E" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+    </div>
+        <!-- JavaScript for Year Range Validation -->
+    <script>
+        document.getElementById('year_range').addEventListener('input', function () {
+            const input = this.value;
+            const pattern = /^\d{4}-\d{4}$/;
+            if (!pattern.test(input) && input.length > 0) {
+                this.style.borderColor = 'red';
+            } else {
+                this.style.borderColor = '';
+            }
+        });
+    </script>
+</body>
+</html>

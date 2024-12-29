@@ -4,18 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laurino Archive</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+            text-align: center;
+            text-transform: uppercase;
+            color: #333;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        label {
+            font-size: 1rem;
+        }
+        input {
+            font-size: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+        }
+        button {
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            width: 80%;
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 2rem 0;
+        }
+        .donation-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        img.widescreen-image {
+            width: 100%;
+            max-width: 1200px;
+            height: 300px; /* Creates widescreen effect */
+            object-fit: cover; /* Ensures aspect ratio is preserved */
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .credit {
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .donate-button {
+            max-width: 200px; /* Adjust size of the button */
+            width: 100%;     /* Responsive scaling */
+            height: auto;    /* Maintain aspect ratio */
+        }
+         .donation-section {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 4rem; /* Space below the section */
+
+        }
+        .donation-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .donation-section p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .custom-donate-button {
+            display: inline-block;
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #FFC107; /* Yellow button */
+            color: #333; /* Dark text for contrast */
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+        .custom-donate-button:hover {
+            background-color: #e0a806;
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+    </style>
 </head>
 <body>
-    <h1>Laurino Archive Search</h1>
+    <img src="static/images/laurino.jpeg" alt="Laurino Archive" class="widescreen-image">
+    <h1>LAURINO RECORDS SEARCH</h1>
+    <p class="subtitle">Search Laurino's Records from the years 1865-1905</p>
     <form method="POST" action="/">
         <label for="surname">Surname:</label>
         <input type="text" id="surname" name="surname" required>
-        <br>
         <label for="year_range">Year Range:</label>
         <input type="text" id="year_range" name="year_range" placeholder="e.g., 1866-1875">
-        <br>
         <button type="submit">Search</button>
     </form>
+    <p class="credit">Records made available by the kind contribution of J. Gregorio.</p>
     <hr>
     {% if records %}
         {% if records is string %}
@@ -31,16 +154,15 @@
             </ul>
         {% endif %}
     {% endif %}
-    <hr>
-    <!-- PayPal Donation Form -->
+    </hr>
     <div class="donation-section">
-        <h2>Support the Laurino Archive</h2>
+        <h3>Support the Laurino Archive</h3>
         <p>Your donations help us maintain and expand this archive. Thank you for your support!</p>
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
-            <input type="hidden" name="hosted_button_id" value="F87WU4KRSG25E" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-        </form>
+        <!-- Custom Donate Button -->
+        <a href="https://www.paypal.com/donate?hosted_button_id=F87WU4KRSG25E"
+           class="custom-donate-button" target="_blank" rel="noopener">
+           Donate Now
+        </a>
     </div>
 </body>
 </html>
